@@ -203,7 +203,7 @@ class Cache
 
         $file = "{$filename}.{$extension}";
 
-        return [$this->getCachePath(implode('/', $segments)), $file];
+        return [$this->getCachePath($request->getHttpHost() . '/' . implode('/', $segments)), $file];
     }
 
     /**
